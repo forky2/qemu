@@ -2257,7 +2257,7 @@ static gchar *arm_gdb_arch_name(CPUState *cs)
     if (arm_feature(env, ARM_FEATURE_IWMMXT)) {
         return g_strdup("iwmmxt");
     }
-    return g_strdup("arm");
+    return g_strdup("armeb");
 }
 
 #ifdef CONFIG_TCG
