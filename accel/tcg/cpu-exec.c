@@ -209,9 +209,9 @@ static inline void log_cpu_exec(target_ulong pc, CPUState *cpu,
 
         qemu_log_mask(CPU_LOG_EXEC,
                       "Trace %d: %p [" TARGET_FMT_lx
-                      "/" TARGET_FMT_lx "/%hu/%08x] %s\n",
+                      "/" TARGET_FMT_lx "/%08x/%08x] %s\n",
                       cpu->cpu_index, tb->tc.ptr, tb->cs_base, pc,
-                      tb->size, tb->flags, lookup_symbol(pc));
+                      tb->flags, tb->cflags, lookup_symbol(pc));
 
 #if defined(DEBUG_DISAS)
         if (qemu_loglevel_mask(CPU_LOG_TB_CPU)) {
